@@ -1,9 +1,12 @@
 package com.example.myapptamar;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,16 +18,48 @@ public class MainActivity extends AppCompatActivity {
     private ImageView img;
     private Button btn1,btn2,btn3,btn4;
     private TextView tv;
+    private FrameLayout fl;
+    private int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        count=0;
         img=findViewById(R.id.imageView);
         btn1=findViewById(R.id.button);
         btn2=findViewById(R.id.button7);
         btn3=findViewById(R.id.button6);
         btn4=findViewById(R.id.button5);
-        btn1..
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img.setY(img.getY()+5);
+                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img.setY(img.getY()-5);
+                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img.setX(img.getX()-5);
+                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img.setX(img.getX()+5);
+                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 }
