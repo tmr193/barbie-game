@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         count=0;
         img=findViewById(R.id.imageView);
+        tv=findViewById(R.id.textView2);
         btn1=findViewById(R.id.button);
         btn2=findViewById(R.id.button7);
         btn3=findViewById(R.id.button6);
@@ -34,28 +35,46 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setY(img.getY()+5);
+                 img.setY(img.getY()-15);
+                if(img.getY()<0||img.getY()>630){
+                    count++;
+                    tv.setText(count+"");
+                }
+
                 Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setY(img.getY()-5);
+                img.setY(img.getY() + 15);
+                if(img.getY()<0||img.getY()>630){
+                    count++;
+                tv.setText(count + "");
+            }
+
                 Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setX(img.getX()-5);
+                    img.setX(img.getX()-15);
+                if(img.getX()<-75&&img.getX()>210){
+                    count++;
+                    tv.setText(count + "");
+                }
                 Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setX(img.getX()+5);
+                    img.setX(img.getX()+15);
+                if(img.getX()<-75&&img.getX()>210){
+                    count++;
+                    tv.setText(count + "");
+                }
                 Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
