@@ -35,47 +35,65 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 img.setY(img.getY()-15);
+                img.setImageResource(R.drawable.barbie);
+                img.setY(img.getY()-15);
                 if(img.getY()<0||img.getY()>630){
                     count++;
                     tv.setText(count+"");
+                    img.setImageResource(R.drawable.crying);
                 }
+                if(count==5){
+                    finish();
+                    System.exit(0);}
 
-                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                img.setImageResource(R.drawable.barbie);
                 img.setY(img.getY() + 15);
-                if(img.getY()<0||img.getY()>630){
+                if(img.getY()>615){
                     count++;
-                tv.setText(count + "");
-            }
+                    tv.setText(count + "");
+                    img.setImageResource(R.drawable.crying);
+                }
+                if(count==5){
+                    finish();
+                    System.exit(0);}
 
-                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    img.setX(img.getX()-15);
-                if(img.getX()<-75&&img.getX()>210){
+                img.setImageResource(R.drawable.barbie);
+                img.setX(img.getX()-15);
+                if(img.getX()<-90){
                     count++;
                     tv.setText(count + "");
+                    img.setImageResource(R.drawable.crying);
                 }
-                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+                if(count==5){
+                    finish();
+                    System.exit(0);}
+
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    img.setX(img.getX()+15);
-                if(img.getX()<-75&&img.getX()>210){
+                img.setImageResource(R.drawable.barbie);
+                img.setX(img.getX()+15);
+                if(img.getX()>300){
                     count++;
                     tv.setText(count + "");
+                    img.setImageResource(R.drawable.crying);
                 }
-                Toast.makeText(MainActivity.this," "+img.getX()+" "+img.getY(), Toast.LENGTH_SHORT).show();
+                if(count==5){
+                    finish();
+                    System.exit(0);
+                }
             }
         });
 
