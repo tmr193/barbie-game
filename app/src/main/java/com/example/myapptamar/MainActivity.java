@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 if(img.getY()<0||img.getY()>630){
                     count++;
                     tv.setText(count+"");
-                    img.setImageResource(R.drawable.crying);
+                    img.setImageResource(R.drawable.sad);
                 }
                 if(count==5){
                     finish();
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 if(img.getY()>615){
                     count++;
                     tv.setText(count + "");
-                    img.setImageResource(R.drawable.crying);
+                    img.setImageResource(R.drawable.sad);
                 }
                 if(count==5){
                     finish();
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 if(img.getX()<-90){
                     count++;
                     tv.setText(count + "");
-                    img.setImageResource(R.drawable.crying);
+                    img.setImageResource(R.drawable.sad);
                 }
                 if(count==5){
                     finish();
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 if(img.getX()>300){
                     count++;
                     tv.setText(count + "");
-                    img.setImageResource(R.drawable.crying);
+                    img.setImageResource(R.drawable.sad);
                 }
                 if(count==5){
                     finish();
